@@ -1,0 +1,22 @@
+:root {
+  --font: helvetica;
+  --color: #3d6e48;
+  --tamarillo: #712A30;
+}
+
+
+.header {
+  color: var(--tamarillo);
+  font-family: var(--font);
+  padding: 20px;
+}
+
+button, a {
+  font-family: var(--font);
+  font-size: 16px; 
+}
+
+.body-txt-normal {
+  font-family: var(--font);
+  font-size: 16px; 
+}

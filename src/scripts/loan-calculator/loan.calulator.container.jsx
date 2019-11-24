@@ -4,7 +4,7 @@ import { getpageContent } from './selectors';
 
 const mapStateToProps = state => {
   const pageData = getpageContent(state);
-  return { pageData };
+  return { ...pageData };
 };
 
 const mapDispatchToProps = dispatch => {

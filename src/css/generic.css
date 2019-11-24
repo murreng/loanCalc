@@ -1,0 +1,31 @@
+:root {
+    --base-space: 10px;
+    --sml-space: calc(var(--base-space) /2);
+    --space-x-2: calc(var(--base-space) * 2);
+    --space-x-3: calc(var(--base-space) + var(--space-x-2));
+}
+
+.generic {
+  &-row-container {
+    display: flex;
+
+    &:not(:first-child) {
+       margin-top: var(--base-space);
+    }
+  }
+
+  &-text-box {
+    max-width: 100px;
+    margin-right: 10px;
+    padding: 1.125rem;
+    display: block;
+    width: 100%;
+    border: .125rem solid #0177bd;
+    border-radius: .25rem;
+    box-shadow: none;
+  }
+
+  &-label {
+    width: 150px;
+  }
+}

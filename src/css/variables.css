@@ -1,0 +1,15 @@
+:root {
+    --base-space: 10px;
+    --sml-space: calc(var(--base-space) /2);
+    --space-x-2: calc(var(--base-space) * 2);
+    --space-x-3: calc(var(--base-space) + var(--space-x-2));
+    --font: helvetica;
+    --color: #3d6e48;
+    --tamarillo: #712A30;
+
+    /*  View widths*/
+
+    --tablet: 750px;
+    --desktop: 1020px;
+    --lrg-desktop: 1220px;
+}
