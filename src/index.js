@@ -8,7 +8,7 @@ const rootElement = document.getElementById('index');
 
 render(
   <Provider store={store}>
-      <App />
+    <App />
   </Provider>,
   rootElement
 );

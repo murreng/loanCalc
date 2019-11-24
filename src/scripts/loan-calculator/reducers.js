@@ -1,8 +1,9 @@
 import { handleActions } from 'redux-actions';
 import { combineReducers } from 'redux';
 import { types } from './actions';
+import content from '../../CMSPayloads/content.json';
 
-const defaultContent = {};
+const defaultContent = content;
 
 const loanCalculator = handleActions(
   {
@@ -11,7 +12,8 @@ const loanCalculator = handleActions(
     }
   },
   {
-    stuff: null
+    stuff: null,
+    content: {...defaultContent}
   }
 );
 

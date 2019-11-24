@@ -1,0 +1,9 @@
+loan-calculator {
+  &-title{
+    color: blue;
+  }
+
+  &-container {
+    display: flex;
+  }
+}

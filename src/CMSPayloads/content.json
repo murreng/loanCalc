@@ -1,0 +1,25 @@
+{
+  "pageData": {
+    "title": "Your Loan",
+    "labels": {
+      "amountReq": "Amount requested",
+      "duration": "Duration",
+      "currency": "(in £)",
+      "period": "(in months)"
+    }
+  },
+  "loanData": {
+    "types": {
+      "rfc": "Revolving Credit Facility",
+      "bl": "Business laon"
+    },
+    "labels": {
+      "interestRate": "Interest rate",
+      "symbol": "(in %)",
+      "repayDate": "Repayment date",
+      "principle": "Principle",
+      "interest": "Interest",
+      "totalRepay": "Total repayment"
+    }
+  }
+}

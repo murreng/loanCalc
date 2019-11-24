@@ -1,10 +1,10 @@
-import LoanCalculatorComponent from './loan.calculator.component';
+import LoanProductComponent from './loan.product.component';
 import { connect } from 'react-redux';
-import { getpageContent } from './selectors';
+import { getProductContent } from './selectors';
 
 const mapStateToProps = state => {
-  const pageData = getpageContent(state);
-  return { pageData };
+  const productData = getProductContent(state);
+  return { productData };
 };
 
 const mapDispatchToProps = dispatch => {
@@ -17,9 +17,9 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-const LoanCalculatorContainer = connect(
+const LoanProductContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(LoanCalculatorComponent);
+)(LoanProductComponent);
 
-export default LoanCalculatorContainer;
+export default LoanProductContainer;

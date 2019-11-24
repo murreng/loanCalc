@@ -1,9 +1,19 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const HomeComponent = props => {
+const LoanCalculatorComponent = props => {
 
-  return <div>Home Area - add stuff!</div>;
+  const {title, labels} = props;
+
+  if(!labels) return null;
+
+  const {amountReq, duration, currency, period} = labels;
+
+  return (
+    <div>
+      <h3>{title}</h3>
+    </div>
+    );
 };
 
 HomeComponent.propTypes = {};

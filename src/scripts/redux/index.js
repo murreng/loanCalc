@@ -3,8 +3,6 @@ import createSagaMiddleware from 'redux-saga';
 import reducer from './reducers';
 import saga from './sagas';
 
-
-const initialState = {};
 const sagaMiddleware = createSagaMiddleware();
 const enhancers = [];
 
@@ -23,6 +21,6 @@ const composedEnhancers = compose(
 
 const store = createStore(reducer, composedEnhancers);
 
-sagaMiddleware.run(saga)
+sagaMiddleware.run(saga);
 
 export default store;

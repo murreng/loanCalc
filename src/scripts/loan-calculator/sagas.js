@@ -12,16 +12,12 @@ export function* getHolidayHomesAlert() {
   }
 }
 
-
 function* watchAlerts() {
   yield takeEvery(types.REQ_GET_LOAN_DATA, getHolidayHomesAlert);
 }
 
-
 function* sagas() {
-  yield all([
-    watchAlerts()
-  ]);
+  yield all([watchAlerts()]);
 }
 
 export default sagas;
