@@ -1,5 +1,15 @@
-const loanTypes = Object.freeze({},{
-  BL:'bl',
-  RFC:'rfc'})
+const loanTypes = Object.freeze(
+  {
+    BL: 'bl',
+    RFC: 'rfc'
+  }
+);
 
-  export {loanTypes};
+const apiLoanTypes = Object.freeze(
+  {
+    BL: 'business_loan',
+    RFC: 'revolving_credit_facility'
+  }
+);
+
+export { loanTypes, apiLoanTypes };

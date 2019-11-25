@@ -1,14 +1,13 @@
-:root {
-  --font: helvetica;
-  --color: #3d6e48;
-  --tamarillo: #712A30;
-}
-
-
 .header {
   color: var(--tamarillo);
   font-family: var(--font);
+  font-size: 45px;
   padding: 20px;
+
+  &.centered {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 button, a {

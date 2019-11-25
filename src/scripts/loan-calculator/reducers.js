@@ -7,13 +7,40 @@ const defaultContent = content;
 
 const loanCalculator = handleActions(
   {
-    [types.DO_STUFF](state) {
-      return { ...state, stuff: 'hello' };
+    [types.UPDATE_INTEREST_RATE](state, { payload }) {
+      return {
+        ...state,
+        products: { ...state.products, ...payload }
+      };
+    },
+    [types.UPDATE_AMOUNT](state, { payload }) {
+      return {
+        ...state,
+        ...payload
+      };
+    },
+    [types.UPDATE_DURATION](state, { payload }) {
+      return {
+        ...state,
+        ...payload
+      };
+    },
+    [types.SET_PRODUCT_DATA](state, { payload }) {
+      return {
+        ...state,
+        products: { ...state.products, ...payload }
+      };
     }
   },
   {
-    stuff: null,
-    content: {...defaultContent}
+    content: { ...defaultContent },
+    amount: 0,
+    duration: 0,
+    products: {
+      rcf: 0,
+      bl: 0,
+      data: null
+    }
   }
 );
 

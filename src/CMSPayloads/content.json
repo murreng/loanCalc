@@ -11,15 +11,17 @@
   "loanData": {
     "types": {
       "rfc": "Revolving Credit Facility",
-      "bl": "Business laon"
+      "bl": "Business loan"
     },
     "labels": {
       "interestRate": "Interest rate",
-      "symbol": "(in %)",
-      "repayDate": "Repayment date",
-      "principle": "Principle",
-      "interest": "Interest",
-      "totalRepay": "Total repayment"
-    }
+      "symbol": "(in %)"
+    },
+    "data": [
+      "Repayment date",
+      "Principle",
+      "Interest",
+      "Total repayment"
+    ]
   }
 }
