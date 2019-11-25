@@ -2,11 +2,14 @@
   "name": "loancalc",
   "version": "1.0.0",
   "description": "Loan calculator",
+  "homepage": "https://murreng.github.io/loanCalc/",
   "main": "/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "format": "prettier --write --single-quote --print-width=120 --tab-width=2 \"./**/*.{js,jsx}\""
+    "format": "prettier --write --single-quote --print-width=120 --tab-width=2 \"./**/*.{js,jsx}\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -50,6 +53,5 @@
   },
   "bugs": {
     "url": "https://github.com/murreng/loanCalc/issues"
-  },
-  "homepage": "https://github.com/murreng/loanCalc#readme"
+  }
 }
