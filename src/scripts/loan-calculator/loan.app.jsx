@@ -1,16 +1,16 @@
 import React from 'react';
 import store from '../redux';
 import { Provider } from 'react-redux';
-import LoacCalculatorContainer from './loan.calulator.container';
+import LoanCalculatorContainer from './loan.calulator.container';
 import '../../css/main.css';
-class Account extends React.Component {
+class LoanApp extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <LoacCalculatorContainer />
+        <LoanCalculatorContainer />
       </Provider>
     );
   }
 }
 
-export default Account;
+export default LoanApp;
