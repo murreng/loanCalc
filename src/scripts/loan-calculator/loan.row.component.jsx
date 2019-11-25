@@ -5,12 +5,13 @@ const LoanRowComponent = props => {
   const { data, classes } = props;
 
   return (
-
     <div className={`loan-row-container body-txt-normal ${classes}`}>
       {data.map((item, idx) => {
         return (
-          <div className="loan-row-cell" key={idx}>{item}</div>
-        )
+          <div className="loan-row-cell" key={idx}>
+            {item}
+          </div>
+        );
       })}
     </div>
   );

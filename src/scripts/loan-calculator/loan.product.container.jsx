@@ -7,12 +7,10 @@ const mapStateToProps = (state, ownProps) => {
   const productData = getProductContent(state);
   const amount = getAmount(state);
   const duration = getDuration(state);
-  const {type, apiData} = ownProps;
+  const { type, apiData } = ownProps;
   return { ...productData, type, amount, duration, apiData };
 };
 
-const LoanProductContainer = connect(
-  mapStateToProps
-)(LoanProductComponent);
+const LoanProductContainer = connect(mapStateToProps)(LoanProductComponent);
 
 export default LoanProductContainer;
