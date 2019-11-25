@@ -1,22 +1,23 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { loanTypes } from './enums';
 import LoanRowComponent from './loan.row.component';
 import {buildRowsData} from './helper';
 
 const LoanCalculatorComponent = props => {
   const [dataRows, setDataRows] = useState(null);
   const [dataCheck, setDataCheck] = useState(false);
-  const { types, labels, data, loanType, type, rateChanged, amount, duration, apiData } = props;
+  const [rate, setRate] = useState(false);
+  const { types, labels, data, type, amount, duration, apiData } = props;
+
   useEffect(() => {
-    if(verifyData()) setDataRows(buildRowsData(amount, duration));
-  }, [amount, duration]);
+    if(verifyData() && rate) setDataRows(buildRowsData(amount, duration, rate));
+  }, [amount, duration, rate]);
 
   if (!labels) return null;
 
   const onRateChanged = e => {
     const val = e.target.value
-    rateChanged({[type]:parseInt(val)});
+    setRate(val);
   };
 
   const verifyData = () => {
@@ -36,8 +37,8 @@ const LoanCalculatorComponent = props => {
           <input type="number" min="0" className="generic-text-box" onChange={onRateChanged}/>
           <div className="generic-label">{symbol}</div>
         </div>
-        <div>
-        <LoanRowComponent data={data}/>
+        <div className="loan-table-container">
+        <LoanRowComponent data={data} classes={'head-row'}/>
         {dataRows && dataCheck && dataRows.map((row, idx) => {
           return (
             <LoanRowComponent key={idx} data={row}/>
@@ -54,12 +55,23 @@ const LoanCalculatorComponent = props => {
 };
 
 LoanCalculatorComponent.propTypes = {
-  title: PropTypes.string,
+  types: PropTypes.shape({
+    bl: PropTypes.string,
+    rfc: PropTypes.string
+  }),
   labels: PropTypes.shape({
-    amountReq: PropTypes.string,
-    duration: PropTypes.string,
-    currency: PropTypes.string,
-    period: PropTypes.string
+    interestRate: PropTypes.string,
+    symbol: PropTypes.string
+  }),
+  data:PropTypes.arrayOf(PropTypes.string),
+  type: PropTypes.string,
+  amount: PropTypes.number,
+  duration: PropTypes.number,
+  apiData: PropTypes.shape( {
+    amount_max: PropTypes.number,
+    amount_min: PropTypes.number,
+    duration_max: PropTypes.number,
+    duration_min: PropTypes.number
   })
 };
 

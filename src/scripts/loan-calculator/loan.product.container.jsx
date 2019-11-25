@@ -11,17 +11,8 @@ const mapStateToProps = (state, ownProps) => {
   return { ...productData, type, amount, duration, apiData };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    rateChanged(payload) {
-      dispatch(actions.updateInterestRate(payload));
-    }
-  };
-};
-
 const LoanProductContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(LoanProductComponent);
 
 export default LoanProductContainer;

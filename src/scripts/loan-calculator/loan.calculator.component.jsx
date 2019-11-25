@@ -53,7 +53,24 @@ LoanCalculatorComponent.propTypes = {
     duration: PropTypes.string,
     currency: PropTypes.string,
     period: PropTypes.string
-  })
+  }),
+  productData: PropTypes.shape({
+    business_loan: PropTypes.shape({
+      amount_max: PropTypes.number,
+      amount_min: PropTypes.number,
+      duration_max: PropTypes.number,
+      duration_min: PropTypes.number
+    }),
+    revolving_credit_facility: PropTypes.shape({
+      amount_max: PropTypes.number,
+      amount_min: PropTypes.number,
+      duration_max: PropTypes.number,
+      duration_min: PropTypes.number
+    })
+  }),
+  changeAmount: PropTypes.func,
+  changeDuration: PropTypes.func,
+  mounted: PropTypes.func
 };
 
 LoanCalculatorComponent.defaultProps = {};

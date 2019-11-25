@@ -38,10 +38,18 @@
   }
 }
 
+&-table-container {
+  border: solid 1px black;
+}
+
 &-row {
   &-container {
     display: flex;
-    border: solid 1px black;
+
+    &.head-row {
+      border-bottom: solid 1px black;
+      background-color: #ECF4FF;
+    }
   }
 
   &-cell {
